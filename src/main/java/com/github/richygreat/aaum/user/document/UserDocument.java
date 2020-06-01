@@ -10,7 +10,6 @@ import java.util.List;
 @Document("user")
 public class UserDocument {
     @Id
-    private String id;
     private String username;
     private String password;
     private List<String> roles;

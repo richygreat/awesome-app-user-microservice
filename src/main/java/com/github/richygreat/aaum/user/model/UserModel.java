@@ -7,7 +7,6 @@ import java.util.List;
 
 @Data
 public class UserModel {
-    private String id;
     @NotEmpty
     private String username;
     @NotEmpty

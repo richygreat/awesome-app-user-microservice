@@ -24,7 +24,6 @@ public class UserService {
 
     @Transactional
     public UserModel createUser(UserModel userModel) {
-        userModel.setId(null);
         return userMapper.toModel(userRepository.save(userMapper.toDocument(userModel)));
     }
 
@@ -43,7 +42,6 @@ public class UserService {
 
     @Transactional
     public UserModel updateUser(String id, UserModel userModel) {
-        userModel.setId(id);
         return userRepository.findById(id).map(
                 userDocument -> userMapper.toModel(userRepository.save(userMapper.toDocument(userModel))))
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Id not found"));
