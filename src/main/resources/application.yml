@@ -1,0 +1,2 @@
+spring.data.mongodb.uri: mongodb+srv://awesome-app-user-microservice-admin:VlHeLyvqXY4hp2qu@test-orvxq.mongodb.net/awesome-app-user-microservice
+server.port: 8081
